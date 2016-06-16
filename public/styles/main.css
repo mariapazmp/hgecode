@@ -1,6 +1,6 @@
 @import "fonts.css";
 
-body {
+/*body {
   background: #ec008c;
   color: #fff;
 }
@@ -12,7 +12,30 @@ h1 {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   margin: 0;
-  font: 20vmin/1 HUGEAvantGardeBold;
+  
   letter-spacing: -0.06em;
   text-align: center;
-}
+}*/
+
+/* Resets */
+html, body, ul, li {margin: 0; padding: 0}
+a {text-decoration: none;}
+
+/* General Styles */
+
+a:hover {transition: background-color 0.6s, color 0.6s; -o-transition: background-color 0.6s, color 0.6s; -moz-transition: background-color 0.6s, color 0.6s; -webkit-transition: background-color 0.6s, color 0.6s; }
+.clear {display: block; clear: both;}
+
+/* Index Styles */
+
+#header {padding: 0 24px; background-color: #ec008c;  }
+  #header .logo {padding: 24px 0; margin-right: 48px; float: left;}
+  #header .logo img {max-width: 60px;}
+  #header .menu {}
+  #header .menu ul {overflow: hidden;}
+  #header .menu ul li{ float: left;display: block; }
+  #header .menu ul li a {padding: 24px 24px 25px 24px; color: #FFF; font-size: 21px;  font-family: huge; display: block;}
+  #header .menu ul li a:hover {background-color: #FFF; color:#ec008c; text-decoration: none; }
+
+#index {}
+#index .main-slide .image img {width: 100%}
