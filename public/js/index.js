@@ -3,6 +3,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	document.getElementById("submenu-lbl").addEventListener("click", showSubmenu); /*If the user clicks on the item menu */
 	document.getElementById("backg").addEventListener("click", showSubmenu); /*If the user clicks on the rest of the page when the submenu is displayed */
+	document.getElementById("ic-toggle").addEventListener("click", showMenuxs); /*If the user clicks on the item menu */
+	document.getElementById("link-subxs").addEventListener("click", showSubmenuxs); /*If the user clicks on the item menu */
+
+	function showSubmenuxs (){ /*Submenu inside hamburguer menu */
+		document.getElementById("submenuxs").style.display = "block";
+	}
+
+
+
+
+	function showMenuxs (){
+		document.getElementById("ic-toggle").style.backgroundImage = "url(images/toggle-close.svg)";
+	}
 
 
 	function showSubmenu (){	
