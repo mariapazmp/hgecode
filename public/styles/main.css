@@ -2,7 +2,7 @@
 
 
 /* Resets */
-  body {position: relative;}
+  body {position: relative; overflow: hidden;}
   html, body, ul, li {margin: 0; padding: 0}
   a {text-decoration: none;}
 
@@ -18,21 +18,46 @@
   .appear {display: block}
   #backg {display: none; background-color: rgba(0, 0, 0, 0.5); z-index: 10; position: absolute; width: 100%; height: 100%}
 
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+
+
 /* Index Styles */
 
-nav {}
-  nav .top{padding: 20px 24px;background-color: #ec008c;}
-  nav .top .logo img {max-width: 50px;}
-  nav .menuxs {padding-top: 12px; background-color: #FFF;}
-  nav ul li a{padding: 10px 10px 10px 24px; color: #1a1a1a; font-size: 21px;font-family: huge;display: block;}
-  nav ul li a:hover {background-color: #EEEEEE}
-  nav ul #submenu-lblxs #link-subxs {background-image: url('../images/ic_arrow.png'); background-repeat:  no-repeat; background-position: right center;}
-  nav .menuxs #submenuxs {display: none;}
-  nav .menuxs #submenuxs li a{padding: 15.5px 24px !important; display: block !important;clear: both !important;font: 17px/1 Galaxie !important;color: #777 !important;}
-  nav .menuxs #submenuxs li a:hover {background-color: #eee; color: #ec008c!important;}
+.sidenav{
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
 
 
-#header {padding: 0 24px; background-color: #ec008c;  }
+
+  .sidenav .top{padding: 20px 24px;background-color: #b7b7b7;}
+  .sidenav .top .logo {height: 20px;}
+  .sidenav .top .logo img {max-width: 50px;}
+  .sidenav .menuxs {padding-top: 12px; background-color: #FFF;}
+  .sidenav ul li a{padding: 10px 10px 10px 24px; color: #1a1a1a; font-size: 21px;font-family: huge;display: block;}
+  .sidenav ul li a:hover {background-color: #EEEEEE}
+  .sidenav ul #submenu-lblxs #link-subxs {background-image: url('../images/ic_arrow.png'); background-repeat:  no-repeat; background-position: right center;}
+  .sidenav .menuxs #submenuxs {display: none;}
+  .sidenav .menuxs #submenuxs li a{padding: 15.5px 24px !important; display: block !important;clear: both !important;font: 17px/1 Galaxie !important;color: #777 !important;}
+  .sidenav .menuxs #submenuxs li a:hover {background-color: #eee; color: #ec008c!important;}
+  .sidenav .copy {padding: 25px; font-family: 'Open Sans', sans-serif; }
+
+
+#content {transition: margin-left .5s; width: 100%}
+
+#header {padding: 0 24px; background-color: #b7b7b7;  }
   #header .logo {padding: 24px 0; margin-right: 48px; float: left;}
   #header .logo img {max-width: 60px;}
   #header .menu {}

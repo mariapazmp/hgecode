@@ -97,9 +97,9 @@ Measurements are specified in pixels. Dimensions are fluid unless specified.
 * The HUGE logo and navigation toggle slide left to right.
 * The open navigation icon should change to the close navigation icon (“x”).
 * Translucent mask appears over content, right of navigation.
-* The Primary Navigation should include link items and menu items.
-* When a user hovers a Primary Navigation item, it should change color (magenta/light gray).
-* When a user clicks a Primary Navigation link item, the browser should navigate to a new page.
+* DONE. The Primary Navigation should include link items and menu items.
+* DONE. When a user hovers a Primary Navigation item, it should change color (magenta/light gray).
+* DONE. When a user clicks a Primary Navigation link item, the browser should navigate to a new page.
 * When a user clicks a Primary Navigation menu item, the Secondary Navigation should “push” down, the chevron should rotate * 180°.
 * When a user hovers a Secondary Navigation item, it should change color (magenta/light gray).
 * When a user clicks a Secondary Navigation item, browser should navigate to a new page.
