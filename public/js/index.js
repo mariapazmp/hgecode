@@ -1,20 +1,40 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+	document.getElementById("ic-toggle").addEventListener("click", openNav);
+
 	function openNav() {
-	    document.getElementById("hugenav").style.width = "80%";
-	    document.getElementById("content").style.marginLeft = "80%";
-	}
 
-	function closeNav() {
-	    document.getElementById("hugenav").style.width = "0";
-	    document.getElementById("content").style.marginLeft = "0";
-	}
+		if (!(document.getElementById("ic-toggle").className.match("close"))) { 
 
-	document.getElementById("header").addEventListener("click", openNav);
+			document.getElementById("ic-toggle").style.backgroundImage = "url(images/toggle-close.svg)"; /*When sidenav is open, change the hamburger icon */
+			var w = window.innerWidth; /*Get the windows width */
+			var marginl = w-72; /* 72px is the #content's width when the sidenav appears */
+		    document.getElementById("content").style.marginLeft = marginl+"px"; /*Set the #content's margin-left */
+		    document.getElementById("hugenav").style.width = marginl+"px"; /*Set the #hugenav's width */
 
-	document.getElementById("submenu-lbl").addEventListener("click", showSubmenu); /*If the user clicks on the item menu */
-	document.getElementById("backg").addEventListener("click", showSubmenu); /*If the user clicks on the rest of the page when the submenu is displayed */
-	document.getElementById("ic-toggle").addEventListener("click", showMenuxs); /*If the user clicks on the item menu */
+		    document.body.style.overflow = "hidden";
+			document.getElementById("ic-toggle").className = "close";
+			document.getElementById("backg").style.display = "block"; /*Appears the transparency layer over the content */
+
+		
+		}
+
+		else {
+			document.getElementById("hugenav").style.width = "0";
+		    document.getElementById("content").style.marginLeft = "0";	    
+		    document.body.style.overflow = "visible";
+		    document.getElementById("ic-toggle").style.backgroundImage = "url(images/toggle-open.svg)";
+			document.getElementById("ic-toggle").className = ""; /*Remove class close */
+			document.getElementById("backg").style.display = "none"; 
+			
+		}
+
+}
+
+	
+
+	
+
 	
 	document.getElementById("link-subxs").addEventListener("click", showSubmenuxs); /*If the user clicks on the item menu */
 
@@ -30,13 +50,12 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	}
 
+		
 
+/*Desktop Javascript */
 
-
-	function showMenuxs (){
-		document.getElementById("ic-toggle").style.backgroundImage = "url(images/toggle-close.svg)";
-	}
-
+document.getElementById("submenu-lbl").addEventListener("click", showSubmenu); /*If the user clicks on the item menu */
+document.getElementById("backg").addEventListener("click", showSubmenu); /*If the user clicks on the rest of the page when the submenu is displayed */
 
 	function showSubmenu (){	
 		if (!(document.getElementById("submenu").className.match("active"))) { /* If the submenu hasn't the "active" */
@@ -46,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			document.getElementById("link-sub").style.background = "#FFF";
 			document.getElementById("link-sub").style.color = "#ec008c";
 
-			document.getElementById("backg").style.display = "block";
+			document.getElementById("backg").style.display = "block"; /*Appears the transparency layer over the content */
 		}	
 
 		else{

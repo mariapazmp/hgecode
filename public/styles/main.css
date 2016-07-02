@@ -2,7 +2,7 @@
 
 
 /* Resets */
-  body {position: relative; overflow: hidden;}
+  body {position: relative; }
   html, body, ul, li {margin: 0; padding: 0}
   a {text-decoration: none;}
 
@@ -52,7 +52,7 @@
   .sidenav .menuxs #submenuxs {display: none;}
   .sidenav .menuxs #submenuxs li a{padding: 15.5px 24px !important; display: block !important;clear: both !important;font: 17px/1 Galaxie !important;color: #777 !important;}
   .sidenav .menuxs #submenuxs li a:hover {background-color: #eee; color: #ec008c!important;}
-  .sidenav .copy {padding: 25px; font-family: 'Open Sans', sans-serif; }
+  .sidenav .copy {padding: 25px; font-family: 'Open Sans', sans-serif; position: absolute;bottom: 0;}
 
 
 #content {transition: margin-left .5s; width: 100%}
