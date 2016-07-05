@@ -42,7 +42,7 @@
 
 
 
-  .sidenav .top{padding: 20px 24px;background-color: #b7b7b7;}
+  .sidenav .top{padding: 20px 24px;background-color: #ec008c;}
   .sidenav .top .logo {height: 20px;}
   .sidenav .top .logo img {max-width: 50px;}
   .sidenav .menuxs {padding-top: 12px; background-color: #FFF;}
@@ -57,7 +57,7 @@
 
 #content {transition: margin-left .5s; width: 100%}
 
-#header {padding: 0 24px; background-color: #b7b7b7;  }
+#header {padding: 0 24px; background-color: #ec008c;  }
   #header .logo {padding: 24px 0; margin-right: 48px; float: left;}
   #header .logo img {max-width: 60px;}
   #header .menu {}

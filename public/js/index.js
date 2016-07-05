@@ -1,5 +1,76 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+/*Json nav */
+var xmlhttp = new XMLHttpRequest();
+var url = "http://www.w3schools.com/website/Customers_MYSQL.php";
+
+xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        myFunction(xmlhttp.responseText);
+    }
+}
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function myFunction(response) {
+    var arr = JSON.parse(response);
+    var i;
+    var out = "<table>";
+
+    for(i = 0; i < arr.length; i++) {
+        out += "<tr><td>" + 
+        arr[i].Name +
+        "</td><td>" +
+        arr[i].City +
+        "</td><td>" +
+        arr[i].Country +
+        "</td></tr>";
+    }
+    out += "</table>";
+    document.getElementById("id01").innerHTML = out;
+}
+
+	/*Requesting the nav.json 
+
+
+	var xmlhttp = new XMLHttpRequest();
+	var url = "http://www.w3schools.com/website/Customers_MYSQL.php";
+
+	xmlhttp.onreadystatechange = function() {
+
+	    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+	    	alert ("holi");
+	        var myArr = JSON.parse(xmlhttp.responseText); /*Convert json to javascript 
+	        myFunction(myArr); /*Send de js array to myFunction 
+
+	    }
+	};
+
+	xmlhttp.open("GET", url, true);
+	xmlhttp.send();
+
+
+	/*Create the menu items linked with the object defined in nav.json
+	function myFunction(arr) {
+
+	    var out = "";
+	    var i;
+	    for(i = 0; i < arr.length; i++) {
+	        out += '<li><a href="' + arr[i].url + '">' + 
+	        arr[i].display + '</a></li>';
+	    }
+	    document.getElementById("navEx").innerHTML = out;
+	}
+
+*/
+
+
+
+
+
+
+/*Mobile nav */
+
 	document.getElementById("ic-toggle").addEventListener("click", openNav);
 
 	function openNav() {
