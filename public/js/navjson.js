@@ -13,31 +13,41 @@ xmlhttp.send();
 
   function navFunction(response) {
   	var obj = JSON.parse(response);
-      var out = " ";
 
 
+    var out = "";
 
       for (var j in obj.items) {
-        	out += '<li>';
-        	out += '<a class="nav-item" id="navitem-'+j+'" href="' + obj.items[j].url + '">' + obj.items[j].label + '</a>';
-        		
-  	    var items2 = obj.items[j].items;
+          
+        var items2 = obj.items[j].items;
 
-        
-          if ( Object.prototype.toString.call( items2 ) === '[object Array]' ) {
-             out += '<ul id="submenu">';
 
-              for (var k in items2) {
-                out += '<li><a id="link-sub" href="' + items2[k].url + '">' + 
-                       items2[k].label + '</a></li>';
+          if ( items2.length > 0 ) {
 
-              }
-              out += '</ul>';
+          out += '<li class="submenuli">';
+          out += '<a href="' + obj.items[j].url + '">' + 
+                   obj.items[j].label + '</a>';
+
+          out += '<ul id="submenu">';
+
+            for (var k in items2) {
+              out += '<li><a href="' + items2[k].url + '">' + 
+                     items2[k].label + '</a></li>';
+
             }
-        out += '</li>';
-  	}
+            out += '</ul>';
+            out += '</li>';
+          }
 
+          else {
+            out += '<li>';
+            out += '<a href="' + obj.items[j].url + '">' + 
+                   obj.items[j].label + '</a>';
+            out += '</li>';
+          }
+      
+  }
 
-      document.getElementById("id01").innerHTML = out;
+    document.getElementById("mainMenu").innerHTML = out;
   }
 

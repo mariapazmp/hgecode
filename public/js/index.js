@@ -104,15 +104,14 @@ document.getElementById('link-sub').addEventListener("click", showSubmenu); /*If
 var navarray = document.getElementsByClassName("nav-item");
 var i;
 
-console.log(navarray);
+
 
 
 
 
 document.getElementById("backg").addEventListener("click", showSubmenu); /*If the user clicks on the rest of the page when the submenu is displayed */
 
-	function showSubmenu (){	
-		alert ("holi");
+	function showSubmenu (){
 
 		if (!(document.getElementById("submenu").className.match("active"))) { /* If the submenu hasn't the "active" */
    			
