@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-/*Json nav */
+/*Json nav 
 var xmlhttp = new XMLHttpRequest();
 var url = "../data/nav.json";
 
@@ -17,60 +17,30 @@ function navFunction(response) {
 	var obj = JSON.parse(response);
     var out = " ";
 
-    for (var i in obj) {
-    	var items = obj[i];
 
-    	for (var j in items) {
-	        var items2 = items[j].items;
 
-	        for (var k in items2) {
-	        	out += '<li><a href="' + items2[k].url + '">' + 
-	        	       items2[k].label + '</a></li>';
-	        	
-	        }
-	    }
+    for (var j in obj.items) {
+      	out += '<li>';
+      	out += '<a href="' + obj.items[j].url + '">' + obj.items[j].label + '</a>';
+      		
+	    var items2 = obj.items[j].items;
+
+        if ( Object.prototype.toString.call( items2 ) === '[object Array]' ) {
+           out += '<ul id="submenu">';
+
+            for (var k in items2) {
+              out += '<li><a id="link-sub" href="' + items2[k].url + '">' + 
+                     items2[k].label + '</a></li>';
+
+            }
+            out += '</ul>';
+          }
+      out += '</li>';
 	}
 
-    document.getElementById("id01").innerHTML = out;
-}
 
-	/*Requesting the nav.json 
-
-
-	var xmlhttp = new XMLHttpRequest();
-	var url = "http://www.w3schools.com/website/Customers_MYSQL.php";
-
-	xmlhttp.onreadystatechange = function() {
-
-	    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-	    	alert ("holi");
-	        var myArr = JSON.parse(xmlhttp.responseText); /*Convert json to javascript 
-	        myFunction(myArr); /*Send de js array to myFunction 
-
-	    }
-	};
-
-	xmlhttp.open("GET", url, true);
-	xmlhttp.send();
-
-
-	/*Create the menu items linked with the object defined in nav.json
-	function myFunction(arr) {
-
-	    var out = "";
-	    var i;
-	    for(i = 0; i < arr.length; i++) {
-	        out += '<li><a href="' + arr[i].url + '">' + 
-	        arr[i].display + '</a></li>';
-	    }
-	    document.getElementById("navEx").innerHTML = out;
-	}
-
-*/
-
-
-
-
+    document.getElementById("mainMenu").innerHTML = out;
+}*/
 
 
 /*Mobile nav */
@@ -129,10 +99,21 @@ function navFunction(response) {
 
 /*Desktop Javascript */
 
-document.getElementById("submenu-lbl").addEventListener("click", showSubmenu); /*If the user clicks on the item menu */
+document.getElementById('link-sub').addEventListener("click", showSubmenu); /*If the user clicks on the item menu */
+
+var navarray = document.getElementsByClassName("nav-item");
+var i;
+
+console.log(navarray);
+
+
+
+
 document.getElementById("backg").addEventListener("click", showSubmenu); /*If the user clicks on the rest of the page when the submenu is displayed */
 
 	function showSubmenu (){	
+		alert ("holi");
+
 		if (!(document.getElementById("submenu").className.match("active"))) { /* If the submenu hasn't the "active" */
    			
    			document.getElementById("submenu").style.display = "block";/* Shows the submenu */
