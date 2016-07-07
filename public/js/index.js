@@ -1,6 +1,28 @@
 document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
 	
+
+  	var x = document.getElementsByClassName("sublbl");
+  	var y = document.getElementsByClassName("submenu");
+
+  	var i;
+
+  		var plbl = x[0];
+  		var psub = y[0];
+
+  		plbl.onclick = function (){
+  			console.log(psub);
+  			psub.style.display = "block";
+  		}
+
+    
+	
+  	
+  	
+  	
+
+
+
     document.getElementById("subli-3").addEventListener("click", showSubmenu);
     document.getElementById("backg").addEventListener("click", showSubmenu); /*If the user clicks on the rest of the page when the submenu is displayed */
 
