@@ -1,53 +1,57 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.onreadystatechange = () => {
+  if (document.readyState === 'complete') {
+	
+    document.getElementById("subli-3").addEventListener("click", showSubmenu);
+    document.getElementById("backg").addEventListener("click", showSubmenu); /*If the user clicks on the rest of the page when the submenu is displayed */
 
-/*Json nav 
-var xmlhttp = new XMLHttpRequest();
-var url = "../data/nav.json";
+    document.getElementById("ic-toggle").addEventListener("click", openNav);
+	document.getElementById("link-subxs").addEventListener("click", showSubmenuxs); /*If the user clicks on the item menu */
 
-xmlhttp.onreadystatechange=function() {
-    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        navFunction(xmlhttp.responseText);
-    }
+  	
+  }
+
 }
+  
+/*Functions */
 
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
+function showSubmenu (){
+		console.log ("holi");
 
-function navFunction(response) {
-	var obj = JSON.parse(response);
-    var out = " ";
+		if (!(document.getElementById("submenu-3").className.match("active"))) { /* If the submenu hasn't the "active" */
+   			
+   			document.getElementById("submenu-3").style.display = "block";/* Shows the submenu */
+			document.getElementById("submenu-3").className = "active submenu"; /* Adds the "active" class */
+			document.getElementById("subli-3").style.background = "#FFF";
+			document.getElementById("subli-3").style.color = "#ec008c";
 
+			document.getElementById("backg").style.display = "block"; /*Appears the transparency layer over the content */
+		}	
 
+		else{
+			/*Si tiene la clase active y hace click en el botón del menú, cierra el submenu */
+			document.getElementById("submenu-3").style.display = "none";
+			document.getElementById("submenu-3").className = "";
+			document.getElementById("subli-3").style.background = "#ec008c";
+			document.getElementById("subli-3").style.color = "#FFF";
 
-    for (var j in obj.items) {
-      	out += '<li>';
-      	out += '<a href="' + obj.items[j].url + '">' + obj.items[j].label + '</a>';
-      		
-	    var items2 = obj.items[j].items;
-
-        if ( Object.prototype.toString.call( items2 ) === '[object Array]' ) {
-           out += '<ul id="submenu">';
-
-            for (var k in items2) {
-              out += '<li><a id="link-sub" href="' + items2[k].url + '">' + 
-                     items2[k].label + '</a></li>';
-
-            }
-            out += '</ul>';
-          }
-      out += '</li>';
+			document.getElementById("backg").style.display = "none";
+		}
+		
 	}
 
+function showSubmenuxs (){ /*Submenu inside hamburguer menu */
+		if (!(document.getElementById("submenuxs").className.match("active"))) { 
+			document.getElementById("submenuxs").style.display = "block";
+			document.getElementById("submenuxs").className = "active";
+		}
 
-    document.getElementById("mainMenu").innerHTML = out;
-}*/
+		else {
+			document.getElementById("submenuxs").style.display = "none";
+			document.getElementById("submenuxs").className = ""; /*Remove class active */
+		}
+	}
 
-
-/*Mobile nav */
-
-	document.getElementById("ic-toggle").addEventListener("click", openNav);
-
-	function openNav() {
+function openNav() {
 
 		if (!(document.getElementById("ic-toggle").className.match("close"))) { 
 
@@ -76,70 +80,5 @@ function navFunction(response) {
 
 }
 
-	
-
-	
-
-	
-	document.getElementById("link-subxs").addEventListener("click", showSubmenuxs); /*If the user clicks on the item menu */
-
-	function showSubmenuxs (){ /*Submenu inside hamburguer menu */
-		if (!(document.getElementById("submenuxs").className.match("active"))) { 
-			document.getElementById("submenuxs").style.display = "block";
-			document.getElementById("submenuxs").className = "active";
-		}
-
-		else {
-			document.getElementById("submenuxs").style.display = "none";
-			document.getElementById("submenuxs").className = ""; /*Remove class active */
-		}
-	}
-
-		
-
-/*Desktop Javascript */
-
-document.getElementById('link-sub').addEventListener("click", showSubmenu); /*If the user clicks on the item menu */
-
-var navarray = document.getElementsByClassName("nav-item");
-var i;
 
 
-
-
-
-
-document.getElementById("backg").addEventListener("click", showSubmenu); /*If the user clicks on the rest of the page when the submenu is displayed */
-
-	function showSubmenu (){
-
-		if (!(document.getElementById("submenu").className.match("active"))) { /* If the submenu hasn't the "active" */
-   			
-   			document.getElementById("submenu").style.display = "block";/* Shows the submenu */
-			document.getElementById("submenu").className = "active"; /* Adds the "active" class */
-			document.getElementById("link-sub").style.background = "#FFF";
-			document.getElementById("link-sub").style.color = "#ec008c";
-
-			document.getElementById("backg").style.display = "block"; /*Appears the transparency layer over the content */
-		}	
-
-		else{
-			/*Si tiene la clase active y hace click en el botón del menú, cierra el submenu */
-			document.getElementById("submenu").style.display = "none";
-			document.getElementById("submenu").className = "";
-			document.getElementById("link-sub").style.background = "#ec008c";
-			document.getElementById("link-sub").style.color = "#FFF";
-
-			document.getElementById("backg").style.display = "none";
-		}
-		
-	}
-
-
-});
-
-
-
-
-	
-/* */
