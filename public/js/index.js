@@ -1,34 +1,10 @@
 document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
 	
-
-  	var x = document.getElementsByClassName("sublbl");
-  	var y = document.getElementsByClassName("submenu");
-
-  	var i;
-
-  		var plbl = x[0];
-  		var psub = y[0];
-
-  		plbl.onclick = function (){
-  			console.log(psub);
-  			psub.style.display = "block";
-  		}
-
-    
-	
-  	
-  	
-  	
-
-
-
-    document.getElementById("subli-3").addEventListener("click", showSubmenu);
     document.getElementById("backg").addEventListener("click", showSubmenu); /*If the user clicks on the rest of the page when the submenu is displayed */
 
     document.getElementById("ic-toggle").addEventListener("click", openNav);
-	document.getElementById("link-subxs").addEventListener("click", showSubmenuxs); /*If the user clicks on the item menu */
-
+	
   	
   }
 
@@ -37,16 +13,10 @@ document.onreadystatechange = () => {
 /*Functions */
 
 function showSubmenu (){
-		console.log ("holi");
 
 		if (!(document.getElementById("submenu-3").className.match("active"))) { /* If the submenu hasn't the "active" */
    			
-   			document.getElementById("submenu-3").style.display = "block";/* Shows the submenu */
-			document.getElementById("submenu-3").className = "active submenu"; /* Adds the "active" class */
-			document.getElementById("subli-3").style.background = "#FFF";
-			document.getElementById("subli-3").style.color = "#ec008c";
-
-			document.getElementById("backg").style.display = "block"; /*Appears the transparency layer over the content */
+   			document.getElementById("backg").style.display = "block"; /*Appears the transparency layer over the content */
 		}	
 
 		else{
