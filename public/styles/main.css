@@ -1,8 +1,10 @@
 @import "fonts.css";
 
 
+
 /* Resets */
-  body {position: relative; }
+  html {min-height: 100%;}
+  body { }
   html, body, ul, li {margin: 0; padding: 0}
   a {text-decoration: none;}
 
@@ -52,7 +54,7 @@
   .sidenav .menuxs .submenuxs {}
   .sidenav .menuxs .submenuxs li a{padding: 15.5px 24px !important; display: block !important;clear: both !important;font: 17px/1 Galaxie !important;color: #777 !important;}
   .sidenav .menuxs .submenuxs li a:hover {background-color: #eee; color: #ec008c!important;}
-  .sidenav .copy {padding: 25px; font-family: 'Open Sans', sans-serif; position: absolute;bottom: 0;}
+  .sidenav .copy {background-color: #FFF; width: 80%; padding: 25px; font-family: 'Open Sans', sans-serif; position: absolute;bottom: 0;}
 
 
 #content {transition: margin-left .5s; width: 100%}
@@ -129,7 +131,11 @@
   #index .article .h1-xs{font: 44px/1 huge; display: none; margin: 50px 0px 39px; padding: 0 24px;}
   #index .article .text {font: 24px/1.5 Galaxie; margin: 0 auto; width: 968px; }
 
-#footer {background-color: #f5f5f5; text-align: center;}
+#footer {font-family: 'Open Sans', sans-serif; background-color: #e7e7e7;text-align: center;padding: 20px 0;margin-top: 30px;}
+#footer h6 {margin: 0 0 10px 0; font-weight: normal; color: #939393; font-size: 14px;}
+#footer .sign {line-height: 0.5;width: 92px; margin: 0 auto 10px auto; font-family: 'wolf';color: #414041; font-size: 50px;}
+#footer .sign a {color:#787878}
+#footer .date {color: #939393; font-size: 14px;}
 
 @media (max-width: 1200px){ /* Large devices */
   #index .main-slide .text h1 {width: 80%}

@@ -2,10 +2,35 @@ document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
 	
     document.getElementById("backg").addEventListener("click", showSubmenu); /*If the user clicks on the rest of the page when the submenu is displayed */
-
     document.getElementById("ic-toggle").addEventListener("click", openNav);
 	
+
+
+  	var flyli = document.getElementsByClassName('link-subxs');
+  	var ddul = document.getElementsByClassName('submenuxs');
   	
+
+  	for ( var i = 0; i < flyli.length; i++ ) (function(i){ 
+  		
+
+		flyli[i].onclick = function() {
+
+		  	if (!(flyli[i].className.match("active"))) { 
+		  			flyli[i].style.backgroundImage = "url(images/ic_arrow_up.png)";
+					flyli[i].className = "active fly link-subxs";
+					ddul[i].style.display = "block";
+				}
+
+				else {
+					flyli[i].className = "fly link-subxs";
+		  			flyli[i].style.backgroundImage = "url(images/ic_arrow.png)";
+		  			ddul[i].style.display = "none";
+
+				}
+		}
+		      
+		})(i);
+
   }
 
 }
@@ -20,28 +45,17 @@ function showSubmenu (){
 		}	
 
 		else{
+
 			/*Si tiene la clase active y hace click en el botón del menú, cierra el submenu */
 			document.getElementById("submenu-3").style.display = "none";
 			document.getElementById("submenu-3").className = "";
 			document.getElementById("subli-3").style.background = "#ec008c";
 			document.getElementById("subli-3").style.color = "#FFF";
-
 			document.getElementById("backg").style.display = "none";
 		}
 		
 	}
 
-function showSubmenuxs (){ /*Submenu inside hamburguer menu */
-		if (!(document.getElementById("submenuxs").className.match("active"))) { 
-			document.getElementById("submenuxs").style.display = "block";
-			document.getElementById("submenuxs").className = "active";
-		}
-
-		else {
-			document.getElementById("submenuxs").style.display = "none";
-			document.getElementById("submenuxs").className = ""; /*Remove class active */
-		}
-	}
 
 function openNav() {
 
