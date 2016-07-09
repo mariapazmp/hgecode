@@ -2,7 +2,7 @@
 var xmlhttp = new XMLHttpRequest();
 var url = "../data/nav.json";
 
-xmlhttp.onreadystatechange=function() {
+xmlhttp.onreadystatechange=function() { /*This function reads the json data */
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
         navFunction(xmlhttp.responseText);
     }
@@ -12,23 +12,25 @@ xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
   function navFunction(response) {
-      var obj = JSON.parse(response);
-      var out = "";
+      var obj = JSON.parse(response); /* Convert the json to a javascript objet */
+      var out = ""; /* At the end of the loops, this variable will have the html code with the info given by the json */
 
-      /* Generating the desktop menu*/
 
-      for (var j in obj.items) {
+
+  /*----- Generate the desktop menu -----*/
+
+      for (var j in obj.items) { /*Reference the main array called "items" */
               
-          var items2 = obj.items[j].items;
+          var items2 = obj.items[j].items; /* items2 has the submenu options */
 
-          if ( items2.length > 0 ) {
+          if ( items2.length > 0 ) { /* If an item of the menu has submenu options. Ergo, if the items.items in the json isn't empty */
               out += '<li>';
-              out += '<a class="fly" tabindex="1" href="' + obj.items[j].url + '">' + 
+              out += '<a class="fly menu-a" tabindex="1" href="' + obj.items[j].url + '">' + 
                        obj.items[j].label + '</a>';
 
               out += '<ul class="dd submenu">';
 
-              for (var k in items2) {
+              for (var k in items2) { /*With the loop, I show every item of the submenu defined in the json */
                   out += '<li><a href="' + items2[k].url + '">' + 
                          items2[k].label + '</a></li>';
 
@@ -38,7 +40,7 @@ xmlhttp.send();
               out += '</li>';
           }
 
-          else {
+          else { /*This case, shows the html for the items that hasn't submenu options */
             out += '<li>';
             out += '<a href="' + obj.items[j].url + '">' + 
                    obj.items[j].label + '</a>';
@@ -49,7 +51,10 @@ xmlhttp.send();
 
   document.getElementById("nav").innerHTML = out;
 
-  /* Generating the mobile menu*/
+
+
+  /*----- Generate the desktop menu -----
+          Same logic that the desktop version.  */
 
 
   var objxs = JSON.parse(response);  
