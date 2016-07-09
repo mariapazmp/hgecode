@@ -1,8 +1,14 @@
+/* ---------
+
+  Code Challenge for HUGE by
+  María Paz Muñoz
+  2016
+
+--------- */
+
 @import "fonts.css";
 
-
-
-/* Resets */
+/* Reset style */
   html {min-height: 100%;}
   body {position: relative; }
   html, body, ul, li {margin: 0; padding: 0}
@@ -24,7 +30,7 @@
 
   .submenu { padding: 12px 0; position: absolute; background-color: #FFF;  z-index: 100; }
   .submenu li {float: none !important;}
-  .submenu li a {padding: 15.5px 24px!important; display: block!important; clear: both!important; font: 17px/1 Galaxie!important; color: #777!important;}
+  .submenu li a {padding: 15.5px 24px!important; display: block!important; clear: both!important; font: 16px/1 Galaxie!important; color: #777!important;}
   .submenu li a:hover {background-color: #eee !important; color: #ec008c !important}
   .appear {display: block}
 
@@ -34,20 +40,6 @@
 
 
 /* Index Styles */
-
-.sidenav{ height: 100%; width: 0; position: fixed; z-index: 1;  top: 0;left: 0;overflow-x: hidden;transition: 0.5s; }
-  .sidenav .top{padding: 20px 24px;background-color: #ec008c;}
-  .sidenav .top .logo {height: 20px;}
-  .sidenav .top .logo img {max-width: 50px;}
-  .sidenav .menuxs {padding-top: 12px; background-color: #FFF;}
-  .sidenav ul li a{padding: 10px 10px 10px 24px; color: #1a1a1a; font-size: 21px;font-family: huge;display: block;}
-  .sidenav ul li a:hover {background-color: #EEEEEE}
-  .sidenav ul .submenu-lblxs .link-subxs {background-image: url('../images/ic_arrow.png'); background-repeat:  no-repeat; background-position: right center;}
-  .sidenav .menuxs .submenuxs {}
-  .sidenav .menuxs .submenuxs li a{padding: 15.5px 24px !important; display: block !important;clear: both !important;font: 17px/1 Galaxie !important;color: #777 !important;}
-  .sidenav .menuxs .submenuxs li a:hover {background-color: #eee; color: #ec008c!important;}
-  .sidenav .copy {background-color: #FFF; width: 80%; padding: 25px; font-family: 'Open Sans', sans-serif; position: absolute;bottom: 0;}
-
 
 #content {transition: margin-left .5s; width: 100%}
 
@@ -61,57 +53,6 @@
   #header #nav li a {float: left; padding: 24px 24px 25px 24px; color: #FFF; font-size: 21px;  font-family: huge; display: block;}
   #header #nav li a:hover {background-color: #FFF; color:#ec008c; text-decoration: none; }
 
-
-/*Desktop Nav menu */
-
-#nav,#nav ul { list-style:none; margin:0;  }
-#nav ul { left:-9999px; position:absolute; top:77px; width:auto;}
-#nav > li > a {overflow:hidden;}
-
-#nav li a.fly { padding-right:15px;}
-#nav li a.fly:focus {background-color: #FFF; color: #ec008c!important;}
-#nav ul li { margin:0;}
-#nav li .dd {width: 140%}
-#nav li .dd li a { width: 100%; box-sizing: border-box;}
-
-
-#nav li a:focus {
-    outline-width:0;
-}
-
-/*popups*/
-#nav li a:active + ul.dd, #nav li a:focus + ul.dd, #nav li ul.dd:hover {
-    left:0;
-}
-
-
-/*Mobile Nav menu */
-#navxs {position: relative;}
-#navxs,#navxs ul { list-style:none; margin:0;  }
-#navxs ul { left:-9999px; position:relative; height: 0; top:0px; width:auto;}
-#navxs > li > a {overflow:hidden;}
-
-#navxs li a.fly { padding-right:15px;}
-#navxs li a.fly:focus {background-color: #FFF; color: #ec008c!important;}
-#navxs a.fly:focus .dd {height: 100%}
-
-#navxs ul li { margin:0;}
-#navxs li .dd {width: 140%}
-#navxs li .dd li a { width: 100%; box-sizing: border-box;}
-
-
-#navxs li a:focus { outline-width:0;}
-
-/*popups*/
-#navxs li a:active + ul.dd, #navxs li a:focus + ul.dd, #navxs li ul.dd:hover {
-    left:0;
-    height: 100%;
-}
-
-
-
-#ic-toggle {background-image: url('../images/toggle-open.svg'); background-repeat: no-repeat; background-position: center center; height: 20px; width: 20px; display: none; cursor: pointer; float: left; padding: 20px 24px; height: 20px;}
-
 #index {}
   #index .main-slide {position: relative; max-height: 640px; }
   #index .main-slide .image img {width: 100%; max-height: 640px; }
@@ -122,10 +63,76 @@
   #index .article .text {font: 24px/1.5 Galaxie; margin: 0 auto; width: 968px; }
 
 #footer {font-family: 'Open Sans', sans-serif; background-color: #e7e7e7;text-align: center;padding: 20px 0;margin-top: 30px;}
-#footer h6 {margin: 0 0 10px 0; font-weight: normal; color: #939393; font-size: 14px;}
-#footer .sign {line-height: 0.5;width: 92px; margin: 0 auto 10px auto; font-family: 'wolf';color: #414041; font-size: 50px;}
-#footer .sign a {color:#787878}
-#footer .date {color: #939393; font-size: 14px;}
+  #footer h6 {margin: 0 0 10px 0; font-weight: normal; color: #939393; font-size: 14px;}
+  #footer .sign {line-height: 0.5;width: 92px; margin: 0 auto 10px auto; font-family: 'wolf';color: #414041; font-size: 50px;}
+  #footer .sign a {color:#787878}
+  #footer .date {color: #939393; font-size: 14px;}
+
+.sidenav{ height: 100%; width: 0; position: fixed; z-index: 1;  top: 0;left: 0;overflow-x: hidden;transition: 0.5s; }
+  .sidenav .top{padding: 20px 24px;background-color: #ec008c;}
+  .sidenav .top .logo {height: 20px;}
+  .sidenav .top .logo img {max-width: 50px;}
+  .sidenav .menuxs {padding-top: 12px; background-color: #FFF;}
+  .sidenav ul li a{padding: 10px 10px 10px 24px; color: #1a1a1a; font-size: 21px;font-family: huge;display: block;}
+  .sidenav ul li a:hover {background-color: #EEEEEE}
+  .sidenav ul .submenu-lblxs .link-subxs {background-size: 48px auto; background-image: url('../images/ic_arrow.svg'); background-repeat:  no-repeat; background-position: right center;}
+  .sidenav .menuxs .submenuxs {}
+  .sidenav .menuxs .submenuxs li a{padding: 15.5px 24px !important; display: block !important;clear: both !important;font: 17px/1 Galaxie !important;color: #777 !important;}
+  .sidenav .menuxs .submenuxs li a:hover {background-color: #eee; color: #ec008c!important;}
+  .sidenav .copy {background-color: #FFF; width: 80%; padding: 25px; font-family: 'Open Sans', sans-serif; position: absolute;bottom: 0;}
+
+
+/*Desktop Nav menu 
+  The behavior of the Desktop Navigation menu were developed with the following CSS rules
+*/
+
+#nav {}
+  #nav,#nav ul { list-style:none; margin:0;  }
+  #nav ul { left:-9999px; position:absolute; top:77px; width:auto;}
+  #nav > li > a {overflow:hidden;}
+
+  #nav li a.fly { padding-right:15px;}
+  #nav li a.fly:focus {background-color: #FFF; color: #ec008c!important;}
+  #nav ul li { margin:0;}
+  #nav li .dd {width: 140%}
+  #nav li .dd li a { width: 100%; box-sizing: border-box;}
+
+/*Following line makes appear the submenu options*/
+  #nav li a:focus { outline-width:0;}
+  #nav li a:active + ul.dd, #nav li a:focus + ul.dd, #nav li ul.dd:hover {
+      left:0; 
+    }
+
+
+/*Mobile Nav menu */
+#navxs {position: relative;}
+  #navxs,#navxs ul { list-style:none; margin:0;  }
+  #navxs ul { left:-9999px; position:relative; height: 0; top:0px; width:auto;}
+  #navxs > li > a {overflow:hidden;}
+
+  #navxs li a.fly { padding-right:15px;}
+  #navxs li a.fly:focus {background-color: #FFF; color: #ec008c!important;}
+  #navxs a.fly:focus .dd {height: 100%}
+
+  #navxs ul li { margin:0;}
+  #navxs li .dd {width: 140%}
+  #navxs li .dd li a { width: 100%; box-sizing: border-box;}
+
+
+  #navxs li a:focus { outline-width:0;}
+
+  /*popups*/
+  #navxs li a:active + ul.dd, #navxs li a:focus + ul.dd, #navxs li ul.dd:hover {
+      left:0; height: 100%; }
+
+
+#ic-toggle {background-image: url('../images/toggle-open.svg'); background-repeat: no-repeat; background-position: center center; height: 20px; width: 20px; display: none; cursor: pointer; float: left; padding: 20px 24px; height: 20px;}
+
+
+
+
+/*--------- Media queries ---------*/
+
 
 @media (max-width: 1200px){ /* Large devices */
   #index .main-slide .text h1 {width: 80%}

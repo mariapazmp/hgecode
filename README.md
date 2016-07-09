@@ -59,13 +59,13 @@ npm start
 
 ### Typography
 
-* **Primary Navigation** 21/48 HUGE Avant Garde Bold
-* **Secondary Navigation** 16/48 Galaxie Copernicus Book
-* **Headline (Desktop)** 120/132 HUGE Avant Garde Bold
-* **Body Copy (Desktop)** 24/36 Galaxie Copernicus Book
-* **Headline (Mobile)** 44/48 HUGE Avant Garde Bold
-* **Body Copy (Mobile)** 14/24 Galaxie Copernicus Book
-* **Copyright (Mobile)** 12/16 Helvetica Neue Regular
+* DONE. **Primary Navigation** 21/48 HUGE Avant Garde Bold
+* DONE. **Secondary Navigation** 16/48 Galaxie Copernicus Book
+* DONE. **Headline (Desktop)** 120/132 HUGE Avant Garde Bold
+* DONE. **Body Copy (Desktop)** 24/36 Galaxie Copernicus Book
+* DONE. **Headline (Mobile)** 44/48 HUGE Avant Garde Bold
+* DONE. **Body Copy (Mobile)** 14/24 Galaxie Copernicus Book
+* DONE. **Copyright (Mobile)** 12/16 Helvetica Neue Regular
 
 ### Color
 
@@ -104,7 +104,7 @@ Measurements are specified in pixels. Dimensions are fluid unless specified.
 * DONE. When a user hovers a Secondary Navigation item, it should change color (magenta/light gray).
 * DONE. When a user clicks a Secondary Navigation item, browser should navigate to a new page.
 
-* When a user clicks outside of the navigation, the navigation should close.
+* DONE. When a user clicks outside of the navigation, the navigation should close.
 * DONE. When the navigation closes:
   * DONE. the menu should “pull” from right to left
   * DONE. the logo and toggle button should “slide” from right to left
