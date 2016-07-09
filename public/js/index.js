@@ -2,20 +2,17 @@ document.onreadystatechange = () => {
   if (document.readyState === 'complete') {
 	
     document.getElementById("ic-toggle").addEventListener("click", openNav);
-	
-
 
   	var flyli = document.getElementsByClassName('link-subxs');
   	var ddul = document.getElementsByClassName('submenuxs');
   	var menuitems = document.getElementsByClassName('menu-a');
+  	var submenuitems = document.getElementsByClassName('submenu');
 
   	
-
-
   	for ( var i = 0; i < flyli.length; i++ ) (function(i){ 
   		
 
-		flyli[i].onclick = function() {
+	flyli[i].onclick = function() {
 
 		  	if (!(flyli[i].className.match("active"))) { 
 		  			flyli[i].style.backgroundImage = "url(images/ic_arrow_up.png)";
@@ -31,16 +28,14 @@ document.onreadystatechange = () => {
 				}
 		}
 
-		menuitems[i].onclick = function (){
+	menuitems[i].onclick = function (){ /*Shows the traslucent background when click on menu item with submenu options */
 
-			console.log ("holi");
-
-			if (!(menuitems[i].className.match("active"))) { 
-		  			document.getElementById("backg").style.display = "block";
+			if (!(submenuitems[i].className.match("active"))) { 
+		  			document.getElementById("backg").style.display = "block";		  			
 				}
 
 				else {
-					document.getElementById("backg").style.display = "none";
+					document.getElementById("backg").style.display = "none";		
 
 				}
 
@@ -54,21 +49,7 @@ document.onreadystatechange = () => {
   
 /*Functions */
 
-function showSubmenu (){
 
-		if (!(document.getElementById("submenu-3").className.match("active"))) { /* If the submenu hasn't the "active" */
-   			
-   			document.getElementById("backg").style.display = "block"; /*Appears the transparency layer over the content */
-		}	
-
-		else{
-
-			/*Si tiene la clase active y hace click en el botón del menú, cierra el submenu */
-			
-			document.getElementById("backg").style.display = "none";
-		}
-		
-	}
 
 
 function openNav() {
