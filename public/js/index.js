@@ -51,7 +51,7 @@ document.onreadystatechange = () => {
 				else { document.getElementById("backg").style.display = "none";	}
 			}		
 		      
-	})(i); /* Close the loop */
+	})(i); /* Close the loop */ 
 
 
 /*------- Events about the translucent background -------*/
