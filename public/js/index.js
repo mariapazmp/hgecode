@@ -1,54 +1,52 @@
 document.onreadystatechange = () => {
+
   if (document.readyState === 'complete') {
 
 /*------- [Mobile], when user clicks on the hamburger menu, calls the openNav function */
-		document.getElementById("ic-toggle").addEventListener("click", openNav);	
+	document.getElementById("ic-toggle").addEventListener("click", openNav);	
     
 
 /*------- Desktop and mobile navigation events -------*/
 
   	/* [Mobile] Two variables for save the main menu items and the submenu lists  */
-  	var itemsxs = document.getElementsByClassName('link-subxs');
-  	var submenuxs = document.getElementsByClassName('submenuxs');
+  	let itemsxs = document.getElementsByClassName('link-subxs');
+  	let submenuxs = document.getElementsByClassName('submenuxs');
 
   	/* [Desktop] */
-  	var menuitems = document.getElementsByClassName('menu-a');
-  	var submenuitems = document.getElementsByClassName('submenu');
+  	let menuitems = document.getElementsByClassName('menu-a');
+  	let submenuitems = document.getElementsByClassName('submenu');
 
 
-  	for ( var i = 0; i < itemsxs.length; i++ ) (function(i){ /* For every item in the menu */
+
+  	for ( var i = 0; i < itemsxs.length; i++ ) (function(i){ /* PASAR A UNA FUNCIÓN*/
   		
   		/* [Mobile] when user clicks a Primary Navigation item */
 			itemsxs[i].onclick = function() {
-
-				/* Class "active", marks an item menu when the user clicks on it */
 			  	
-			  	if (!(itemsxs[i].className.match("active"))) { /*If the user clicks a Primary nav item and its submenu is not being shown */
-			  			/* */
-			  			itemsxs[i].style.backgroundImage = "url(images/ic_arrow_up.svg)";
-						itemsxs[i].className = "active fly link-subxs";
-						submenuxs[i].style.display = "block";
-					}
-					else { /*Close the mobile submenu */
-						itemsxs[i].className = "fly link-subxs";
-			  			itemsxs[i].style.backgroundImage = "url(images/ic_arrow.svg)";
-			  			submenuxs[i].style.display = "none";
+			  	let active = "fly link-subxs";
+		  		let arrow = "url(images/ic_arrow.svg)";
+		  		let display = "none";
 
-					}
+			  	if (!(itemsxs[i].className.match("active"))) { //If the user clicks a Primary nav item and its submenu is not being shown 
+		  			active = "active fly link-subxs";
+					arrow = "url(images/ic_arrow_up.svg)";
+					display = "block";
+				}
+
+				itemsxs[i].className = active;
+	  			itemsxs[i].style.backgroundImage = arrow;
+	  			submenuxs[i].style.display = display
+
+				
 			}
 
 
-		/* [Desktop] when user clicks a Primary Navigation item */
-
-				/* The main behavior of the menu and submenu items in desktop, were developed with CSS rules.
-				The following code are made for shown the translucent background when user clicks on a Primary menu item with submenu options */
-
 			menuitems[i].onclick = function (){ 
-
+				let display = "none";
 				if (!(submenuitems[i].className.match("active"))) { 
-			  			document.getElementById("backg").style.display = "block";		  			
-					}
-				else { document.getElementById("backg").style.display = "none";	}
+			  		display = "block";  			
+				}
+				document.getElementById("backg").style.display = display;
 			}		
 		      
 	})(i); /* Close the loop */ 
@@ -72,6 +70,9 @@ document.getElementById("backg").onclick = function() {
 		
 		}
 }
+     
+
+
 
 /*------- openNav Function -------*/
 function openNav() {

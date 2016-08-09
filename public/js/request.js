@@ -1,4 +1,4 @@
-module "request" {  
+
 export function requestFunction (method, url) {
   return new Promise(function (resolve, reject) {
     var xhr = new XMLHttpRequest();
@@ -23,4 +23,3 @@ export function requestFunction (method, url) {
   });
 
  }
-}
