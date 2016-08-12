@@ -64,7 +64,7 @@ const classDictionary = {
 
           if ( subitems.length > 0 ) { // If an item of the menu has submenu options. Ergo, if the items.items in the json isn't empty 
               out += `<li class="${classes.item}">
-                      <a class="fly ${classes.link}" tabindex="1" href="${element.url}">${element.label}</a>
+                      <a class="${classes.link}" tabindex="1" href="${element.url}">${element.label}</a>
                       <ul class="dd ${classes.submenu}">`;
 
               subitems.forEach ( subelement => {

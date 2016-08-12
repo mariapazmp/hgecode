@@ -209,7 +209,7 @@ a:hover {
 }
   
 
-.sidenav{ 
+.sidenav { 
 	height: 100%;
 	width: 0;
 	position: fixed;
@@ -218,6 +218,16 @@ a:hover {
 	left: 0;
 	overflow-x: hidden;
 	transition: 0.5s;
+
+  a {
+    padding: 10px 10px 10px 24px;
+    color: #1a1a1a;
+    font-size: 21px;
+    font-family: huge;
+    display: block;
+  }
+
+  a:hover {background-color: $gray}  
 	
 	.top{
 		padding: 20px 24px;
@@ -233,18 +243,42 @@ a:hover {
 		padding-top: 12px;
 		background-color: #FFF;
 	}
+
+  .link-subxs {
+    background-size: 48px auto;
+    background-image: url('../images/ic_arrow.svg');
+    background-repeat:  no-repeat;
+    background-position: right center;
+  }
+
+  .submenuxs {
+    a {
+      padding: 15.5px 24px !important;
+      display: block !important;
+      clear: both !important;
+      font: 17px/1 Galaxie !important;
+      color: #777 !important;
+    }
+
+    a:hover {
+      background-color: $gray;
+      color: $magenta!important;
+    }
+
+  }
+
+  .copy {
+    background-color: #FFF;
+    width: 80%;
+    padding: 25px;
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    bottom: 0;
+  }
+
 }
 
   
-
-  .sidenav ul li a{padding: 10px 10px 10px 24px; color: #1a1a1a; font-size: 21px;font-family: huge;display: block;}
-  .sidenav ul li a:hover {background-color: $gray}
-  .sidenav ul .submenu-lblxs .link-subxs {background-size: 48px auto; background-image: url('../images/ic_arrow.svg'); background-repeat:  no-repeat; background-position: right center;}
-  .sidenav .menuxs .submenuxs {}
-  .sidenav .menuxs .submenuxs li a{padding: 15.5px 24px !important; display: block !important;clear: both !important;font: 17px/1 Galaxie !important;color: #777 !important;}
-  .sidenav .menuxs .submenuxs li a:hover {background-color: $gray; color: $magenta!important;}
-  .sidenav .copy {background-color: #FFF; width: 80%; padding: 25px; font-family: 'Open Sans', sans-serif; position: absolute;bottom: 0;}
-
 
 /*Desktop Nav menu 
   The behavior of the Desktop Navigation menu were developed with the following CSS rules
@@ -255,8 +289,8 @@ a:hover {
   #nav ul { left:-9999px; position:absolute; top:76px; width:auto;}
   #nav > li > a {overflow:hidden;}
 
-  #nav li a.fly { padding-right:15px;}
-  #nav li a.fly:focus {background-color: #FFF; color: $magenta!important;}
+  #nav li a.menu-a { padding-right:15px;}
+  #nav li a.menu-a:focus {background-color: #FFF; color: $magenta!important;}
   #nav ul li { margin:0;}
   #nav li .dd {width: 140%}
   #nav li .dd li a { width: 100%; box-sizing: border-box;}
@@ -274,9 +308,9 @@ a:hover {
   #navxs ul { left:-9999px; position:relative; height: 0; top:0px; width:auto;}
   #navxs > li > a {overflow:hidden;}
 
-  #navxs li a.fly { padding-right:15px;}
-  #navxs li a.fly:focus {background-color: #FFF; color: $magenta!important;}
-  #navxs a.fly:focus .dd {height: 100%}
+  #navxs li a.menu-a { padding-right:15px;}
+  #navxs li a.menu-a:focus {background-color: #FFF; color: $magenta!important;}
+  #navxs a.menu-a:focus .dd {height: 100%}
 
   #navxs ul li { margin:0;}
   #navxs li .dd {width: 140%}
