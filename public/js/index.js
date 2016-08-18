@@ -11,24 +11,26 @@ document.onreadystatechange = () => {
   	let submenu = document.getElementsByClassName('submenu');
   	
   	let sideitems = document.getElementsByClassName('link-subxs');
-  	let sidesubmenu = document.getElementsByClassName('sidesubmenu');  	
+  	let sidesubmenu = document.getElementsByClassName('submenuxs');  	
+	
 
-  	for ( var i = 0; i < sideitems.length; i++ ) (	
-		function showSubmenu(i){ 
+  	for ( var i = 0; i < sideitems.length; i++ ) (function(i){ 
+	
 			sideitems[i].onclick = function() {
-				let active = "fly link-subxs";
+				let active = "menu-a link-subxs";
 				let arrow = "url(images/ic_arrow.svg)";
 				let display = "none";
 
-				if (!(sideitems[i].className.match("active"))) { 
-					active = "active fly link-subxs";
+				if (!(sideitems[i].className.match("active"))) { 			
+					
+					active = "active menu-a link-subxs";
 					arrow = "url(images/ic_arrow_up.svg)";
 					display = "block";
 				}
 
 				sideitems[i].className = active;
 				sideitems[i].style.backgroundImage = arrow;
-				sidesubmenu[i].style.display = display				
+				sidesubmenu[i].style.display = display;				
 			}
 
 			items[i].onclick = function (){ 

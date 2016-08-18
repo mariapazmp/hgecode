@@ -1,0 +1,27 @@
+Documentation, Nav excersice.
+v. 1.0.0
+Maria Paz Muñoz
+2016
+
+The main file of this project is index.html, where you can find the frame of the page and the elements that compose it.
+
+In the folder "public/CSS", you can find the styles of the project, in the file "main.css". Some of those styles, define the behavior of the Navigation, in mobile and desktop versions.
+
+"fonts.css", contains the rules to use the requested fonts, and one aditional font-family that I use in the footer of the desktop versions. Those fonts are saved in the folder "public/fonts".
+
+As a requirement, the items of the Navigation menu are loaded from a JSON file, hosted in data/nav.json. 
+In the folder "public/js", is the file "navjson.js" that makes the magic: it extract the info of the JSON file, converts it in a javascript object, and shows that info in the index.html. In "navjson.js", you can find the explained process in more specific words.
+
+The "index.js" makes the front-end core interactions, about the mobile hamburger menu (openNav function), and complementary behaviors of the mobile and desktop navigation. There, you can find a more technical description of the developed process.
+
+The development process was realized using git and github. 
+In this link you can find the performed process in small milestones: 
+https://github.com/mariapazz/hgecode
+
+
+Thanks for this challenge!
+
+
+
+
+

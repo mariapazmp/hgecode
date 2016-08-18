@@ -149,20 +149,17 @@ a:hover {
     margin: 0 auto;
     color: #FFF;
     text-align: center; }
-
 #index .article {
   margin-top: 60px; }
-
-#index .article .h1-xs {
+  #index .article .text {
+    font: 24px/1.5 Galaxie;
+    margin: 0 auto;
+    width: 968px; }
+#index .h1-xs {
   font: 44px/1 huge;
   display: none;
   margin: 50px 0px 39px;
   padding: 0 24px; }
-
-#index .article .text {
-  font: 24px/1.5 Galaxie;
-  margin: 0 auto;
-  width: 968px; }
 
 #footer {
   font-family: 'Open Sans', sans-serif;
@@ -170,27 +167,23 @@ a:hover {
   text-align: center;
   padding: 20px 0;
   margin-top: 30px; }
-
-#footer h6 {
-  margin: 0 0 10px 0;
-  font-weight: normal;
-  color: #939393;
-  font-size: 14px; }
-
-#footer .sign {
-  line-height: 0.5;
-  width: 92px;
-  margin: 0 auto 10px auto;
-  font-family: 'wolf';
-  color: #414041;
-  font-size: 50px; }
-
-#footer .sign a {
-  color: #787878; }
-
-#footer .date {
-  color: #939393;
-  font-size: 14px; }
+  #footer h6 {
+    margin: 0 0 10px 0;
+    font-weight: normal;
+    color: #939393;
+    font-size: 14px; }
+  #footer .sign {
+    line-height: 0.5;
+    width: 92px;
+    margin: 0 auto 10px auto;
+    font-family: 'wolf';
+    color: #414041;
+    font-size: 50px; }
+    #footer .sign a {
+      color: #787878; }
+  #footer .date {
+    color: #939393;
+    font-size: 14px; }
 
 .sidenav {
   height: 100%;
@@ -201,58 +194,48 @@ a:hover {
   left: 0;
   overflow-x: hidden;
   transition: 0.5s; }
-
-.sidenav .top {
-  padding: 20px 24px;
-  background-color: #ec008c; }
-
-.sidenav .top .logo {
-  height: 20px; }
-
-.sidenav .top .logo img {
-  max-width: 50px; }
-
-.sidenav .menuxs {
-  padding-top: 12px;
-  background-color: #FFF; }
-
-.sidenav ul li a {
-  padding: 10px 10px 10px 24px;
-  color: #1a1a1a;
-  font-size: 21px;
-  font-family: huge;
-  display: block; }
-
-.sidenav ul li a:hover {
-  background-color: #eee; }
-
-.sidenav ul .submenu-lblxs .link-subxs {
-  background-size: 48px auto;
-  background-image: url("../images/ic_arrow.svg");
-  background-repeat: no-repeat;
-  background-position: right center; }
-
-.sidenav .menuxs .submenuxs li a {
-  padding: 15.5px 24px !important;
-  display: block !important;
-  clear: both !important;
-  font: 17px/1 Galaxie !important;
-  color: #777 !important; }
-
-.sidenav .menuxs .submenuxs li a:hover {
-  background-color: #eee;
-  color: #ec008c !important; }
-
-.sidenav .copy {
-  background-color: #FFF;
-  width: 80%;
-  padding: 25px;
-  font-family: 'Open Sans', sans-serif;
-  position: absolute;
-  bottom: 0; }
+  .sidenav a {
+    padding: 10px 10px 10px 24px;
+    color: #1a1a1a;
+    font-size: 21px;
+    font-family: huge;
+    display: block; }
+  .sidenav a:hover {
+    background-color: #eee; }
+  .sidenav .top {
+    padding: 20px 24px;
+    background-color: #ec008c; }
+  .sidenav .logo {
+    height: 20px; }
+    .sidenav .logo img {
+      max-width: 50px; }
+  .sidenav .menuxs {
+    padding-top: 12px;
+    background-color: #FFF; }
+  .sidenav .link-subxs {
+    background-size: 48px auto;
+    background-image: url("../images/ic_arrow.svg");
+    background-repeat: no-repeat;
+    background-position: right center; }
+  .sidenav .submenuxs a {
+    padding: 15.5px 24px !important;
+    display: block !important;
+    clear: both !important;
+    font: 17px/1 Galaxie !important;
+    color: #777 !important; }
+  .sidenav .submenuxs a:hover {
+    background-color: #eee;
+    color: #ec008c !important; }
+  .sidenav .copy {
+    background-color: #FFF;
+    width: 80%;
+    padding: 25px;
+    font-family: 'Open Sans', sans-serif;
+    position: absolute;
+    bottom: 0; }
 
 /*Desktop Nav menu 
-  The behavior of the Desktop Navigation menu were developed with the following CSS rules
+  The behavior of the Desktop Navigation menu were developed with the following CSS rules:
 */
 #nav, #nav ul {
   list-style: none;
@@ -267,10 +250,10 @@ a:hover {
 #nav > li > a {
   overflow: hidden; }
 
-#nav li a.fly {
+#nav li a.menu-a {
   padding-right: 15px; }
 
-#nav li a.fly:focus {
+#nav li a.menu-a:focus {
   background-color: #FFF;
   color: #ec008c !important; }
 
