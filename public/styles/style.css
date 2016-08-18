@@ -235,7 +235,7 @@ a:hover {
     bottom: 0; }
 
 /*Desktop Nav menu 
-  The behavior of the Desktop Navigation menu were developed with the following CSS rules:
+  The behavior of the Desktop Navigation menu were developed with the following CSS rules
 */
 #nav, #nav ul {
   list-style: none;
@@ -250,10 +250,10 @@ a:hover {
 #nav > li > a {
   overflow: hidden; }
 
-#nav li a.menu-a {
+#nav li a.fly {
   padding-right: 15px; }
 
-#nav li a.menu-a:focus {
+#nav li a.fly:focus {
   background-color: #FFF;
   color: #ec008c !important; }
 

@@ -12,17 +12,15 @@ document.onreadystatechange = () => {
   	
   	let sideitems = document.getElementsByClassName('link-subxs');
   	let sidesubmenu = document.getElementsByClassName('submenuxs');  	
-	
 
-  	for ( var i = 0; i < sideitems.length; i++ ) (function(i){ 
-	
+  	for ( var i = 0; i < sideitems.length; i++ ) (	
+		function showSubmenu(i){ 
 			sideitems[i].onclick = function() {
 				let active = "menu-a link-subxs";
 				let arrow = "url(images/ic_arrow.svg)";
 				let display = "none";
 
-				if (!(sideitems[i].className.match("active"))) { 			
-					
+				if (!(sideitems[i].className.match("active"))) { 
 					active = "active menu-a link-subxs";
 					arrow = "url(images/ic_arrow_up.svg)";
 					display = "block";
@@ -30,7 +28,7 @@ document.onreadystatechange = () => {
 
 				sideitems[i].className = active;
 				sideitems[i].style.backgroundImage = arrow;
-				sidesubmenu[i].style.display = display;				
+				sidesubmenu[i].style.display = display				
 			}
 
 			items[i].onclick = function (){ 
@@ -42,7 +40,6 @@ document.onreadystatechange = () => {
 			}				  
 		}
 	)(i); /* Close the loop */ 
-
 
 
 
