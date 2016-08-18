@@ -89,6 +89,10 @@ a:hover {
 .appear {
   display: block; }
 
+.active {
+  background-color: #FFF;
+  color: #ec008c !important; }
+
 .closebtn {
   position: absolute;
   top: 0;
@@ -250,10 +254,10 @@ a:hover {
 #nav > li > a {
   overflow: hidden; }
 
-#nav li a.fly {
+#nav li a.menu-a {
   padding-right: 15px; }
 
-#nav li a.fly:focus {
+#nav li a.menu-a:focus {
   background-color: #FFF;
   color: #ec008c !important; }
 
@@ -292,14 +296,14 @@ a:hover {
 #navxs > li > a {
   overflow: hidden; }
 
-#navxs li a.fly {
+#navxs li a.menu-a {
   padding-right: 15px; }
 
-#navxs li a.fly:focus {
+#navxs li a.menu-a:focus {
   background-color: #FFF;
   color: #ec008c !important; }
 
-#navxs a.fly:focus .dd {
+#navxs a.menu-a:focus .dd {
   height: 100%; }
 
 #navxs ul li {

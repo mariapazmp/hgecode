@@ -57,12 +57,12 @@ a:hover {
 		clear: both!important;
 		font: 16px/1 Galaxie!important;
 		color: #777!important;
-		
-		:hover {
-			background-color: $gray !important;
-			color: $magenta !important
-		}			
-	}		
+	}	
+	a:hover {
+		background-color: $gray !important;
+		color: $magenta !important
+	}			
+			
 }
   
 
@@ -75,6 +75,8 @@ a:hover {
 }
 
 .appear {display: block}
+
+.active {background-color: #FFF; color: $magenta!important;}
 
 .closebtn { 
 	position: absolute;
@@ -284,10 +286,16 @@ a:hover {
   The behavior of the Desktop Navigation menu were developed with the following CSS rules
 */
 
-#nav {}
-  #nav,#nav ul { list-style:none; margin:0;  }
-  #nav ul { left:-9999px; position:absolute; top:76px; width:auto;}
-  #nav > li > a {overflow:hidden;}
+#nav {
+	ul {
+		left:-9999px; position:absolute; top:76px; width:auto;
+	}
+	
+	> li > a {overflow:hidden;}
+}
+  
+ 
+
 
   #nav li a.menu-a { padding-right:15px;}
   #nav li a.menu-a:focus {background-color: #FFF; color: $magenta!important;}
